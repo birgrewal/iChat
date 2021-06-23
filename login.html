@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - iChat</title>
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Login</h1>
+        </div>
+        
+        <div class="form">    
+            <span id="message" class="d-none"></span>        
+            <form id="form">
+                <div class="form-input">
+                    <label class="input-label" for="uemail">Email</label><input type="email" name="uemail" id="uemail" placeholder="Eg. user@host.com...">
+                </div>
+                <div class="form-input">
+                    <label class="input-label" for="upass">Password</label><input type="password" name="upass" id="upass" placeholder="At least 8 Characters">
+                </div>
+                <button id="submit">Login</button>
+                    <div class="text-msg">
+                        <span>Don't have account? Try <a href="signup.html">Signup</a></span>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

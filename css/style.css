@@ -1,0 +1,277 @@
+:root {
+    --user-name-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(#35bba2, #1ae0bc, #68f5db);
+    background-color: var(--main-color);
+}
+
+.container {
+    width: 26vw;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgb(168, 167, 167);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+    background-color: white;
+}
+
+.userInfo {
+    text-align: center;
+    background-color: black;
+    height: 15%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.userImg img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.aboutUser {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.aboutUser:first-child .user {
+    max-width: 135px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.aboutUser .name {
+    font-size: var(--user-name-size);
+}
+
+.aboutUser .user {
+    font-size: calc(var(--user-name-size)-3);
+    font-weight: 100;
+}
+
+.out {
+    background-color: white;
+    color: black;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    margin-left: 50px;
+    cursor: pointer;
+    transition: 0.2s transform, background-color ease;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.out:hover {
+    /* background-color: var(--main-color); */
+    background-color: red;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.moreUsers {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.moreUsers .search {
+    width: 90%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 10px rgb(214, 214, 214);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 7px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.moreUsers .search input {
+    width: 70%;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 7px 0 0 7px;
+    border: none;
+}
+
+.moreUsers .search .searchBtn {
+    width: 25%;
+    margin-left: 10px;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-radius: 0 7px 7px 0;
+    transition: .2s background-color, color ease-in-out;
+}
+
+.moreUsers .search .searchBtn:hover {
+    background-color: whitesmoke;
+    color: rgb(58, 58, 58);
+}
+
+.moreUsers .results {
+    width: 93%;
+    max-height: 50vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.moreUsers .results .noUser {
+    margin: 20px;
+    font-size: 16px;
+    color: rgb(61, 61, 61);
+}
+
+.moreUsers .results .user {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    cursor: pointer;
+}
+
+.moreUsers .results .user:is(:last-child) {
+    border: none;
+}
+
+.moreUsers .results .user .aboutUser {
+    width: 70%;
+}
+
+.moreUsers .results .user .userImg img {
+    width: 47px;
+    height: 47px;
+}
+
+.moreUsers .results .user .aboutUser .name {
+    font-size: 17px;
+}
+
+.moreUsers .results .user .aboutUser .email {
+    font-size: 14px;
+    color: rgb(94, 94, 94);
+}
+
+.moreUsers .results .user .status {
+    width: 12.4px;
+    height: 12.4px;
+    border-radius: 50%;
+    background-color: rgb(0, 255, 42);
+}
+
+@media (max-width: 1250px) {
+    .container {
+        width: 30.5vw;
+    }
+}
+
+@media (max-width: 1050px) {
+    .container {
+        width: 33.7vw;
+    }
+}
+
+@media (max-width: 910px) {
+    .container {
+        width: 35.5vw;
+    }
+    .userImg img {
+        width: 40px;
+        height: 40px;
+    }
+    .aboutUser {
+        margin-left: 10px;
+    }
+    .aboutUser .name {
+        font-size: 18px;
+    }
+    .aboutUser .user {
+        font-size: 16px;
+    }
+    .out {
+        width: 30px;
+        margin-left: 35px;
+        padding: 2px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-top-right-radius: 20px;
+    }
+    .moreUsers .results .user .userImg img {
+        width: 37px;
+        height: 37px;
+    }
+    .moreUsers .results .user .status {
+        width: 8.4px;
+        height: 8.4px;
+    }
+    .moreUsers .search {
+        height: 45px;
+        box-shadow: 0 0 5px rgb(214, 214, 214);
+    }
+    .moreUsers .search input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:710px){
+    .moreUsers .search{
+        margin-bottom: 5px;
+        height: 38px;
+    }
+    .aboutUser .user{
+        display: none;
+    }
+    .moreUsers .results .user .aboutUser .email {
+        display: none;
+    }
+
+}
+
+@media (max-width: 500px){
+    .container{
+        width: 50vw;
+    }
+    .moreUsers .search{
+        height: 35px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 390px){
+    .contianer{
+        width: 65vw;
+    }
+}

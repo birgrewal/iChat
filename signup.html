@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp - iChat</title>
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SignUp</h1>
+        </div>
+        
+        <div class="form">    
+            <span id="message" class="d-none"></span>        
+            <form id="form">
+                <div class="formInputs">
+                    <div class="form-input">
+                        <label class="input-label" for="uname">Name</label><input type="text" name="uname" id="uname" placeholder="Eg. Michael Faraday...">
+                    </div>
+                    <div class="form-input">
+                        <label class="input-label" for="uemail">Email</label><input type="email" name="uemail" id="uemail" placeholder="Eg. user@host.com...">
+                    </div>
+                    <div class="form-input">
+                        <label class="input-label" for="uage">Age</label><input type="number" name="uage" id="uage" placeholder="Eg. 25...">
+                    </div>
+                    <div class="form-input">
+                        <label class="input-label" for="ucity">City</label><input type="text" name="ucity" id="ucity" placeholder="Eg. London...">
+                    </div>
+                    <div class="form-input">
+                        <label class="input-label" for="upass">Password</label><input type="password" name="upass" id="upass" placeholder="At least 8 Characters">
+                    </div>
+                    <div class="form-input input-img">
+                        <label for="userImg">Image</label><input type="file" name="userImg" placeholder="Choose" accept="image/jpg, image/png, image/jpeg" id="userImg">
+                    </div>
+                </div>
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/signup.js"></script>
+</body>
+</html>

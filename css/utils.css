@@ -1,0 +1,33 @@
+:root{
+    --main-font: sans-serif;
+    --main-color: #00FFD1;
+}
+
+.form-input{
+    margin: 20px 0 0 5px;
+    height: 32px;
+    display: flex;
+}
+
+.form-input input{
+    margin-left: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 4px;
+    font-size: 10pt;
+}
+
+.form-input input::placeholder{
+    font-size: 12px;
+}
+
+.input-label{
+        font-size: 13pt;
+        color: rgb(66, 65, 65);
+}
+
+.d-none{
+    display: none;
+}
